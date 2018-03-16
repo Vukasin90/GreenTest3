@@ -1,0 +1,116 @@
+.footer {
+    box-shadow: 0px -8px 27px -15px $text-grey;
+    padding-top: 20px;
+    margin-top: 21px;
+}
+
+.upper-footer {
+    border-bottom: 1px solid $theme-green-light;
+    padding-bottom: 43px;
+    margin-top: 30px;
+    @include clearfix;
+    @include mq (1220px) {
+        max-width: 724px;
+        margin: 0 auto;
+    }
+    @include mq (767px) {
+        border: none;
+        padding-bottom: 0;
+    }
+}
+
+.footer-content {
+    max-width: 280px;
+    width: 280px;
+    display: block;
+    float: left;
+    margin-right: 15px;
+    padding-bottom: 30px;
+    border-right: 1px solid $theme-green-light;
+    h3 {
+        font-size: 20px;
+        color: $theme-green-light;
+        margin-bottom: 15px;
+    }
+    p {
+        color: $text-grey;
+        font-size: 14px;
+        line-height: 22px;
+        display: inline-block;
+        width: 276px;
+        margin-bottom: 20px;
+        @include mq (1220px) {
+            width: 170px;
+        }
+    }
+    a {
+        display: block;
+        color: $theme-green-light;
+        text-decoration: underline;
+        line-height: 22px;
+        &:hover {
+            color: $hover-yellow;
+        }
+        span {
+            margin-right: 5px;
+        }
+    }
+    @include mq (1220px) {
+        width: 166px;
+        height: 213px;
+    }
+    @include mq (767px) {
+        display: none;
+    }
+}
+
+.information {
+    li {
+        list-style: none;
+    }
+    a {
+        color: $theme-green-light;
+        font-size: 14px;
+        line-height: 22px;
+        text-decoration: underline;
+    }
+}
+
+.footer-nav {
+    @include mq (1220px) {
+        max-width: 724px;
+        margin: 0 auto;
+        @include mq (767px) {
+            padding: 14px 32px;
+        }
+    }
+    ul {
+        display: inline-block;
+    }
+    li {
+        display: inline-block;
+    }
+    a {
+        font-size: 12px;
+        color: $text-grey;
+        padding: 10px 0 10px 0;
+        &:after {
+            display: inline-block;
+            content: '';
+            border-right: 1px solid $text-grey;
+            height: 10px;
+            vertical-align: middle;
+            margin: 0 5px;
+        }
+        &:hover {
+            text-decoration: underline;
+        } 
+        @include mq (600px) {
+            padding: 0;
+        }
+    }
+    span {
+        font-size: 12px;
+        color: $text-grey;
+    }
+}

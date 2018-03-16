@@ -1,0 +1,173 @@
+.hero {
+    height: 180px;
+    width: 100%;
+    background-size: cover;
+    padding-top: 118px;
+    h1 {
+        color: $white;
+        font-size: 44px;
+        text-transform: uppercase;
+        @include mq (1221px) {
+            margin-left: 20px;
+        }
+    }
+}
+
+.breadcrumbs {
+    display: block;
+    padding: 25px 0;
+    @include mq (1221px) {
+        margin-left: 20px;
+    }
+    @include mq (743px) {
+        display: none;
+    }
+    a {
+        font-size: 14px;
+        color: $text-grey;
+        margin-right: 10px;
+        &:hover {
+            color: $theme-green-light;
+        }
+        &:after {
+            content: "/";
+            display: inline-block;
+            margin-left: 10px;
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+.search-input {
+    width: 280px;
+    position: relative;
+    display: inline-block;
+    @include mq (1221px) {
+        width: 166px;
+        margin-left: 20px;
+    }
+    @include mq (743px) {
+        margin: 30px 20px 25px;
+    }
+    h5 {
+        font-size: 22px;
+        color: $text-grey;
+        &:after {
+            display: inline-block;
+            content: '';
+            width: 100%;
+            border: 1px solid $theme-green-light;
+            margin: 10px 0;
+        }
+        @include mq (743px) {
+            display: none;
+        }
+    }
+    input {
+        height: 36px;
+        border: 1px solid $theme-green-light;
+        width: 100%;
+        padding-left: 10px;
+        cursor: auto;
+        @include mq (743px) {
+            width: 280px;
+        }
+    }
+    span {
+        position: absolute;
+        top: 63px;
+        right: 10px;
+        color: $theme-green-light;
+        @include mq (743px) {
+            top: 8px;
+            right: -99px;
+        }
+    }
+}
+
+.search-results {
+    float: right;
+    max-width: 900px;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include mq (1090px) {
+        width: 75%;
+    }
+    @include mq (743px) {
+        float: none;
+        width: 100%;
+    }
+}
+
+.search-heading {
+    border-bottom: 1px solid $theme-green-light;
+    padding-bottom: 17px;
+    h2 {
+        font-size: 28px;
+        color: $theme-green-light;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        @include mq (743px) {
+            margin-top: 20px;
+        }
+    }
+    span {
+        font-size: 20px;
+        color: $text-grey;
+        line-height: 26px;
+    }
+}
+
+.search-log {
+    margin-top: 10px;
+    border-bottom: 1px solid $theme-green-light;
+    padding: 7px 0 20px 0;
+    h3 a {
+        color: $theme-green-light;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        &:hover {
+            color: $hover-yellow;
+        }
+    }
+    p {
+        font-size: 16px;
+        color: $text-grey;
+        line-height: 24px;
+    }
+}
+
+.navigation-buttons {
+    margin: 30px auto;
+    display: block;
+    width: 280px;
+}
+
+.buttons {
+    width: 34px;
+    height: 34px;
+    background-color: $white;
+    border: 1px solid $theme-green-light;
+    color: $theme-green-light;
+    &:hover {
+        cursor: pointer;
+        border-color: $theme-green;
+        color: $theme-green;
+    }
+}
+
+.active {
+    border: 1px solid $hover-yellow;
+}
+
+.first-page {
+    color: rgba($text-grey, 0.5);
+    border-color: rgba($text-grey, 0.5);
+}

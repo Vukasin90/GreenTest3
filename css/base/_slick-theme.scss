@@ -1,0 +1,31 @@
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    display: block;
+    border: none;
+    background-color: rgba($white, 0.5);
+    &:hover {
+        cursor: pointer;
+        background-color: rgba($white, 0.7);
+    }
+}
+
+.slick-prev {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+button[aria-label] {
+    display: none;
+}

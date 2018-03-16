@@ -1,0 +1,139 @@
+.index-section {
+    @include clearfix;
+}
+
+.info-cards-wrapper {
+    @include clearfix;
+    @include mq (1237px) {
+        margin: 0 auto;
+        max-width: 732px;
+    }
+    @include mq (767px) {
+        padding: 0 10%;
+    }
+}
+
+.slider .hero {
+    width: 100%;
+    height: 460px;
+}
+
+.info-cards {
+    max-width: 380px;
+    width: 380px;
+    float: left;
+    display: block;
+    margin-right: 20px;
+    margin-top: 32px;
+    @include mq (767px) {
+        width: 100%;
+        float: none;
+        max-width: none;
+    }
+    h2:after {
+        display: block;
+        content: '';
+        border: 1px solid $theme-green-light;
+        width: 100%;
+        margin: 10px 0 15px 0;
+    }
+    h2 {
+        color: $text-grey;
+    }
+    @include mq (1237px) {
+        width: 230px; 
+    }
+    @include mq (767px) {
+        width: 100%;
+    }
+}
+
+.left {
+    li {
+        list-style: none;
+    }
+    span{
+        display: block;
+        font-size: 14px;
+    }
+    a {
+        color: $theme-green-light;
+        font-size: 16px;
+        margin-bottom: 18px;
+        &:hover {
+            color: $hover-yellow;
+        }
+    }
+}
+
+.middle {
+    p {
+        float: right;
+        font-size: 14px;
+        display: inline-block;
+        width: 202px;
+        line-height: 1.5;
+        color: $text-grey;
+        @include mq (1237px) {
+            font-size: 12px;
+            width: 114px;
+        }
+        @include mq (767px) {
+            width: 134px;
+        }
+    }
+    a {
+        margin-top: 19px;
+        font-size: 16px;
+        color: $theme-green-light;
+        display: inline-block;
+        &:hover {
+            cursor: pointer;
+            color: $hover-yellow;
+        }
+    }
+    img {
+        @include mq (1237px) {
+            width: 104px;
+        }
+    }
+}
+
+.right {
+    margin-right: 0;
+    a {
+        color: $theme-green-light;
+        display: block;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px
+    }
+    span {
+        color: $theme-green-light;
+        display: block;
+        font-size: 14px;
+        line-height: 20px;
+        &.icon-right-open {
+            display: inline-block;
+        }
+    }
+    .price-big {
+        color: $theme-green-light;
+        font-size: 56px;
+        display: inline-block;
+        margin-top: 24px;
+        letter-spacing: 1.1px;
+        font-weight: bold;
+    }
+    sup {
+        margin-left: 8px;
+        color: $theme-green-light;
+    }
+    a:hover {
+        color: $hover-yellow;
+    }
+    a:not(:last-child) {
+        margin: 16px 0 5px 0;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,13 @@
+@mixin clearfix {
+    &::after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+}
+
+@mixin mq ($screen-size) {
+    @media (max-width: $screen-size) {
+        @content;
+    } 
+}

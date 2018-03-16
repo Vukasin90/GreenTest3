@@ -1,0 +1,78 @@
+.error {
+    margin-left: 22px;
+}
+
+.error-message {
+    width: 280px;
+    float: left;
+    margin-right: 20px;
+    a {
+        display: block;
+        font-size: 16px;
+        color: $text-grey;
+        line-height: 32px;
+        @include mq (766px) {
+            display: none;
+        }
+    }
+    @include mq (766px) {
+        display: none;
+    }
+}
+
+.error-log {
+    display: inline-block;
+    margin-bottom: 250px;
+    @include mq (890px) {
+        width: 430px;
+    }
+    @include mq (766px) {
+        width: 90%;
+        margin: 25px 16px 137px 20px;
+    }
+}
+
+.error-heading {
+    margin-bottom: 30px;
+    h2 {
+        font-size: 28px;
+        color: $theme-green-light;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+    span {
+        color: $text-grey;
+        letter-spacing: 1.6px;
+    }
+}
+
+.error-more-info {
+    margin-bottom: 30px;
+    span {
+        color: $text-grey;
+    }
+    ul {
+        margin-left: 30px;
+        margin-top: 27px;
+    }
+    li {
+        color: $text-grey;
+        line-height: 1.6;
+    }
+}
+
+.error-try-this {
+    span {
+        color: $text-grey;
+    }
+    ul {
+        margin-left: 30px;
+    }
+    li {
+        color: $text-grey;
+        line-height: 1.6;
+        a {
+            color: $theme-green-light;
+        }
+    }
+}

@@ -1,0 +1,230 @@
+.search-input {
+    float: left;
+    @include mq (745px) {
+        display: none;
+    }
+    li {
+        list-style: none;
+        color: $text-grey;
+        font-weight: bold;
+        line-height: 32px;
+        &:hover {
+            color: $theme-green-light;
+            text-decoration: underline;
+        }
+    }
+    ul li ul {
+        margin-left: 15px;
+    }
+}
+
+.active-nav {
+    color: $theme-green-light;
+}
+
+.content-page {
+    width: 900px;
+    padding-left: 20px;
+    display: inline-block;
+    @include mq (1224px) {
+        width: 538px;
+    }
+    @include mq (745px) {
+        width: 100%;
+    }
+    h2 {
+        color: $theme-green-light;
+        font-size: 28px;
+        margin-bottom: 15px;
+        @include mq (743px) {
+            margin-top: 40px;
+        }
+    }
+    .stand-first {
+        color: $text-grey;
+        font-weight: lighter;
+        line-height: 26px;
+    }
+    p {
+        margin-bottom: 20px;
+        color: $text-grey;
+        display: inline-block;
+        @include mq (1224px) {
+            width: 538px;
+        }
+        @include mq (745px) {
+            width: 100%;
+        }
+    }
+    h3, h4, h5 {
+        margin-bottom: 20px;
+        color: $text-grey;
+    }
+    h3 {
+        color: $theme-green-light;
+        font-size: 20px;
+    }
+    ul {
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+    ol {
+        margin-left: 30px;
+        margin-bottom: 30px;
+        line-height: 24px;
+    }
+    button {
+        background-color: $theme-green-light;
+        border: none;
+        width: 160px;
+        height: 46px;
+        display: block;
+        margin-bottom: 14px;
+        font-size: 20px;
+        font-weight: bold;
+        color: $white;
+        &:hover {
+            background-color: $hover-yellow;
+            cursor: pointer;
+        }
+    }
+    table {
+        border-collapse: collapse;
+        margin-bottom: 35px;
+        @include mq (1224px) {
+            width: 95%;
+        }
+        @include mq (540px) {
+            width: 95%;
+        }
+        th {
+            text-align: left;
+            padding: 10px 126px 10px 20px;
+            color: $white;
+            background-color: $theme-green-light;
+            border-bottom: 2px solid $white;
+            @include mq (540px) {
+                width: 97%;
+                padding: 10px 0 10px 20px;
+            }
+        }
+        td {
+            border-bottom: 2px solid $white;
+            background-color: #daebea;
+            padding: 10px 20px 18px 20px;
+            height: 54px;
+            vertical-align: top;
+        }
+    }
+    form {
+        width: 500px;
+        margin-top: 20px;
+        @include mq (745px) {
+            width: 95%;
+        }
+        label {
+            margin-right: auto;
+            color: $theme-green-light;
+            display: inline-block;
+            width: 195px;
+            padding-top: 10px;
+            vertical-align: top;
+        }
+        input {
+            height: 40px;
+            width: 300px;
+            margin-left: auto;
+            margin-bottom: 15px;
+            border:1px solid $theme-green-light;
+            @include mq (745px) {
+                width: 100%;
+            }
+        }
+        textarea {
+            border: 1px solid $theme-green-light;
+            resize: none;
+            width: 300px;
+            @include mq (745px) {
+                width: 100%;
+            }
+        }
+        .submit-btn {
+            background-color: $theme-green-light;
+            width: 120px;
+            font-size: 20px;
+            font-weight: bold;
+            color: $white;
+            height: 46px;
+            margin: 15px 0 20px 198px;
+            cursor: pointer;
+            @include mq (745px) {
+                width: 100%;
+                margin: 20px 0 27px 0;
+            }
+        }
+    }
+    span {
+        color: $text-grey;
+        font-size: 14px;
+        font-style: italic;
+    }
+    button.accordion {
+        width: 100%;
+        height: 63px;
+        background-color: $white;
+        border: 1px solid $theme-green-light;
+        border-bottom: none;
+        color: $text-grey;
+        text-align: left;
+        font-size: 18px;
+        font-weight: 100;
+        padding: 0 0 0 20px;
+        margin: 0;
+        outline: none;
+        @include mq (745px) {
+            width: 95%;
+        }
+        &:hover {
+            box-shadow: 1px -2px 10px -4px $text-grey;
+        }
+    }
+
+    button.accordion::after {
+        content: "\e806";
+        font-family: 'fontovi';
+        font-weight: 100;
+        float: right;
+        margin-right: 10px;
+        margin-right: 25px;
+        font-size: 14px;
+        color: $theme-green-light;
+        transition: transform 100ms ease-in-out;
+    }
+
+    .accordion-content {
+        color: $text-grey;
+        width: 100%;
+        border: 1px solid $theme-green-light;
+        border-top: none;
+        padding: 0 0 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        margin-bottom: 10px;
+        transition: max-height 0.2s ease-in-out;
+        @include mq (745px) {
+            width: 95%;
+        }
+        p {
+            margin-bottom: 10px;
+            display: inline-block;
+            @include mq (1224px) {
+                width: 255px;
+            }
+        }
+    }
+    .is-open::after {
+        transform: rotate(45deg);
+        transition: transform 100ms ease-in-out;
+    }
+
+}

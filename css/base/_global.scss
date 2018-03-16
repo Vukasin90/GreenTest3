@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    position: relative;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 20px;
+    @include mq (1220px) {
+        padding: 0;
+    }
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    color: inherit;
+}
+
